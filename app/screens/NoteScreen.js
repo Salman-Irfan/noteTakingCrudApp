@@ -16,7 +16,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
 import Note from "../components/Note";
 import { useNotes } from "../contexts/NoteProvider";
 import NotFound from "../components/NotFound";
-import { FirebaseApp } from "../../api/firebase";
 import Login from "./Login";
 
 const reverseData = data => {

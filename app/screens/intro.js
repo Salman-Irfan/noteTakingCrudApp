@@ -5,8 +5,26 @@ import {View, StyleSheet, Text, TextInput, Dimensions} from 'react-native';
 import RoundIconBtn from '../components/RoundIconBtn';
 import colors from '../misc/colors';
 import { BannerAd, TestIds, BannerAdSize } from "react-native-google-mobile-ads";
+import * as Notifications from 'expo-notifications';
+import * as Permissions from 'expo-permissions';
 
 const Intro = ({onFinish}) => {
+    useEffect(()=>{
+        registerForPushNotification().then(token=>console.log(token)).catch(err=>console.log(Err))
+      },[])
+      async function registerForPushNotification(){
+        const {status} = await Permissions.getAsync(Permissions.NOTIFICATIONS);
+        if (status!='granted'){
+          const {status} = await Permissions.getAsync(Permissions.NOTIFICATIONS)
+        }
+        if (status!='granted'){
+          alert('failed to get the push token')
+          return;
+        }
+        token = (await Notifications.getExpoPushTokenAsync()).data;
+        return token;
+    
+      }
     const [name, setName] = useState('');
     const handleOnChangeText = (text) => setName(text);
     const handleSubmit = async () => {
