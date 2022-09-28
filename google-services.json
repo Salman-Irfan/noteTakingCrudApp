@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "509322474053",
+    "project_id": "erozgar-mad-2nd-batch-c2eff",
+    "storage_bucket": "erozgar-mad-2nd-batch-c2eff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:509322474053:android:1f73f4f9bca6128853a92c",
+        "android_client_info": {
+          "package_name": "com.notetakingapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "509322474053-mos4n7bptvp9aptvfn71di71cigto0j9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkFBhkUH-bqUsS-UgRIlQaqKAngKIDviM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "509322474053-mos4n7bptvp9aptvfn71di71cigto0j9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

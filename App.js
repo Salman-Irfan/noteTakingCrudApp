@@ -16,22 +16,6 @@ import * as Permissions from 'expo-permissions';
 const Stack = createStackNavigator()
 
 export default function App() {
-  useEffect(()=>{
-    registerForPushNotification().then(token=>console.log(token)).catch(err=>console.log(Err))
-  },[])
-  async function registerForPushNotification(){
-    const {status} = await Permissions.getAsync(Permissions.NOTIFICATIONS);
-    if (status!='granted'){
-      const {status} = await Permissions.getAsync(Permissions.NOTIFICATIONS)
-    }
-    if (status!='granted'){
-      alert('failed to get the push token')
-      return;
-    }
-    token = (await Notifications.getExpoPushTokenAsync()).data;
-    return token;
-
-  }
   const [user, setUser] = useState({});
   const [isAppFirstTimeOpen, SetIsAppFirstTimeOpen] = useState(false);
   const findUser = async () => {
@@ -69,3 +53,4 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
 });
+
